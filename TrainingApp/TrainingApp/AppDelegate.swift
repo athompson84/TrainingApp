@@ -1,4 +1,14 @@
+//
+//  AppDelegate.swift
+//  TrainingApp
+//
+//  Created by Anthony Thompson on 3/4/18.
+//  Copyright © 2018 GSU Team 5. All rights reserved.
+//
+
 import UIKit
+import RealmSwift
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -8,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let realm = try! Realm()
+        
         return true
     }
 
