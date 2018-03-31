@@ -8,9 +8,10 @@
 
 import UIKit
 
-class Tutorials: UITableViewCell {
+class TutorialView: UITableViewCell {
     
-    @IBOutlet weak var TutList: UILabel!
+    @IBOutlet weak var tutorialName: UILabel!
+    @IBOutlet weak var tutorialDescription: UILabel!
     
 
     override func awakeFromNib() {

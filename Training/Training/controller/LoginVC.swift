@@ -11,7 +11,10 @@ import Alamofire
 
 class LoginVC: UIViewController {
     
-    let URL_USER_LOGIN = "http://127.0.0.1/Trainingapp/api/login.php"
+    
+    //Change ip address:
+    //command: "ifconfig" in terminal to retrieve your IP
+    let userURL = "http://10.250.94.39/Trainingapp/api/login.php"
     
     //the defaultvalues to store user data
     let defaultValues = UserDefaults.standard
@@ -36,7 +39,7 @@ class LoginVC: UIViewController {
         
         
         //making a post request
-        Alamofire.request(URL_USER_LOGIN, method: .post, parameters: parameters).responseJSON
+        Alamofire.request(userURL, method: .post, parameters: parameters).responseJSON
             {
                 response in
                 //printing response
@@ -81,17 +84,13 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: navigationController, action: nil)
-        navigationItem.leftBarButtonItem = backButton
+        let logOut = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: navigationController, action: nil)
+        navigationItem.leftBarButtonItem = logOut
         
         // Do any additional setup after loading the view, typically from a nib.
         
         //if user is already logged in switching to profile screen
-        if defaultValues.string(forKey: "username") != nil{
-            let profileViewController = self.storyboard?.instantiateViewController(withIdentifier: "TutorialMenuVC") as! TutorialMenuVC
-            self.navigationController?.pushViewController(profileViewController, animated: true)
-            
-        }
+ 
     }
 
     override func didReceiveMemoryWarning() {

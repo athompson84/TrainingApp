@@ -8,7 +8,9 @@
 
 import Foundation
 
-class TutorialDat: NSObject{
+class TutorialInfo: NSObject{
     
-    
+    var tutorialID: String?
+    var tutorialName: String?
+    var tutorialDescription: String?
 }

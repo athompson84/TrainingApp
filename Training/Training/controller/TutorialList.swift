@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import Alamofire
 
 class TutorialList: UITableViewController {
+    
+    let tutorialURL = "http://10.250.94.39/TrainingApp/api/getTutorial.php"
+    
+    
+    var tutorials = [TutorialInfo]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,24 +24,55 @@ class TutorialList: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        getData()
+    }
+    
+    func getData() {
+        let prefs:UserDefaults = UserDefaults.standard
+        var tutorial = prefs.value(forKey: "TUTORIAL") as! NSString
+        
+        Alamofire.request(tutorialURL, method: .get, parameters: ["tutorial": tutorial]).responseJSON() { (data) in
+            
+            if let jsonResult = data as? Array<Dictionary<String, String>> {
+            
+            var tutorialID = jsonResult [0]["Id"]
+            var tutorialName = jsonResult [0]["tutorialName"]
+            var description = jsonResult [0]["description"]
+            
+            for result in jsonResult {
+                let tutInfo = TutorialInfo()
+                tutInfo.tutorialID = jsonResult [0]["Id"]
+                tutInfo.tutorialName = jsonResult [0]["username"]
+                tutInfo.tutorialDescription = jsonResult [0]["category"]
+                self.tutorials.append(tutInfo)
+                
+            }
+            
+                DispatchQueue.main.async(group: DispatchQueue.,
+                                    execute: { self.tableView.reloadData()
+                })
+               
+           
+            }
+        
+    }
+}
+   
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return tutorials.count
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
