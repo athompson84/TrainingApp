@@ -5,7 +5,7 @@
 //  Created by Anthony Thompson on 3/21/18.
 //  Copyright © 2018 GSU Team 5. All rights reserved.
 //
-
+/*
 import UIKit
 import Alamofire
 
@@ -14,7 +14,9 @@ class TutorialList: UITableViewController {
     let tutorialURL = "http://10.250.94.39/TrainingApp/api/getTutorial.php"
     
     
-    var tutorials = [TutorialInfo]()
+    //var tutorials = [TutorialInfo]()
+ 
+ 
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +31,10 @@ class TutorialList: UITableViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        getData()
+        
     }
     
+    /*
     func getData() {
         let prefs:UserDefaults = UserDefaults.standard
         var tutorial = prefs.value(forKey: "TUTORIAL") as! NSString
@@ -62,6 +65,7 @@ class TutorialList: UITableViewController {
         
     }
 }
+ */
    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
@@ -70,11 +74,11 @@ class TutorialList: UITableViewController {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return tutorials.count
+        return
     }
 
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
@@ -82,15 +86,15 @@ class TutorialList: UITableViewController {
 
         return cell
     }
-    */
+    
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
     /*
     // Override to support editing the table view.
@@ -130,3 +134,4 @@ class TutorialList: UITableViewController {
     */
 
 }
+*/

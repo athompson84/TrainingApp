@@ -14,7 +14,7 @@ class LoginVC: UIViewController {
     
     //Change ip address:
     //command: "ifconfig" in terminal to retrieve your IP
-    let userURL = "http://10.250.94.39/Trainingapp/api/login.php"
+    let userURL = "http://localhost/Trainingapp/api/login.php"
     
     //the defaultvalues to store user data
     let defaultValues = UserDefaults.standard

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F55E408207532BA00E8DA23 /* dataservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F55E407207532BA00E8DA23 /* dataservice.swift */; };
+		1F68F3BC20748A7100F67916 /* TutorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68F3BB20748A7100F67916 /* TutorialVC.swift */; };
+		1F68F3BE20748E7200F67916 /* TutorialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F68F3BD20748E7200F67916 /* TutorialTableViewCell.swift */; };
 		1FC53D9320631A3E0068FA85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC53D9220631A3E0068FA85 /* AppDelegate.swift */; };
 		1FC53D9520631A3E0068FA85 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC53D9420631A3E0068FA85 /* LoginVC.swift */; };
 		1FC53D9820631A3E0068FA85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC53D9620631A3E0068FA85 /* Main.storyboard */; };
@@ -14,12 +17,14 @@
 		1FC53D9D20631A3E0068FA85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC53D9B20631A3E0068FA85 /* LaunchScreen.storyboard */; };
 		1FC53DA920631D9C0068FA85 /* TutorialMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC53DA820631D9C0068FA85 /* TutorialMenuVC.swift */; };
 		1FC53DAB206320050068FA85 /* TutorialList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC53DAA206320050068FA85 /* TutorialList.swift */; };
-		1FC53DAD206328C90068FA85 /* Tutorials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC53DAC206328C90068FA85 /* Tutorials.swift */; };
 		1FC53DAF20671EFE0068FA85 /* TutorialCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC53DAE20671EFD0068FA85 /* TutorialCategory.swift */; };
 		F0C18BBDF4A7B3B87B51F69A /* Pods_Training.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D788315D59031EE84BD60D1 /* Pods_Training.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F55E407207532BA00E8DA23 /* dataservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataservice.swift; sourceTree = "<group>"; };
+		1F68F3BB20748A7100F67916 /* TutorialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC.swift; sourceTree = "<group>"; };
+		1F68F3BD20748E7200F67916 /* TutorialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialTableViewCell.swift; sourceTree = "<group>"; };
 		1FC53D8F20631A3E0068FA85 /* Training.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Training.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC53D9220631A3E0068FA85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FC53D9420631A3E0068FA85 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -29,7 +34,6 @@
 		1FC53D9E20631A3E0068FA85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC53DA820631D9C0068FA85 /* TutorialMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMenuVC.swift; sourceTree = "<group>"; };
 		1FC53DAA206320050068FA85 /* TutorialList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialList.swift; sourceTree = "<group>"; };
-		1FC53DAC206328C90068FA85 /* Tutorials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorials.swift; sourceTree = "<group>"; };
 		1FC53DAE20671EFD0068FA85 /* TutorialCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCategory.swift; sourceTree = "<group>"; };
 		8D788315D59031EE84BD60D1 /* Pods_Training.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Training.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFE69B9805D9DCBEF43FD27 /* Pods-Training.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Training.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Training/Pods-Training.debug.xcconfig"; sourceTree = "<group>"; };
@@ -48,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F55E40B2075330500E8DA23 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1F55E407207532BA00E8DA23 /* dataservice.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		1FC53D8620631A3E0068FA85 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +81,7 @@
 		1FC53D9120631A3E0068FA85 /* Training */ = {
 			isa = PBXGroup;
 			children = (
+				1F55E40B2075330500E8DA23 /* Service */,
 				1FC53DA720631AB90068FA85 /* views */,
 				1FC53DA620631AB40068FA85 /* controller */,
 				1FC53DA420631AA20068FA85 /* models */,
@@ -95,6 +108,7 @@
 				1FC53D9420631A3E0068FA85 /* LoginVC.swift */,
 				1FC53DA820631D9C0068FA85 /* TutorialMenuVC.swift */,
 				1FC53DAA206320050068FA85 /* TutorialList.swift */,
+				1F68F3BB20748A7100F67916 /* TutorialVC.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -102,7 +116,7 @@
 		1FC53DA720631AB90068FA85 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				1FC53DAC206328C90068FA85 /* Tutorials.swift */,
+				1F68F3BD20748E7200F67916 /* TutorialTableViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -253,12 +267,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F68F3BC20748A7100F67916 /* TutorialVC.swift in Sources */,
 				1FC53D9520631A3E0068FA85 /* LoginVC.swift in Sources */,
 				1FC53DAB206320050068FA85 /* TutorialList.swift in Sources */,
-				1FC53DAD206328C90068FA85 /* Tutorials.swift in Sources */,
 				1FC53DAF20671EFE0068FA85 /* TutorialCategory.swift in Sources */,
 				1FC53D9320631A3E0068FA85 /* AppDelegate.swift in Sources */,
 				1FC53DA920631D9C0068FA85 /* TutorialMenuVC.swift in Sources */,
+				1F68F3BE20748E7200F67916 /* TutorialTableViewCell.swift in Sources */,
+				1F55E408207532BA00E8DA23 /* dataservice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
